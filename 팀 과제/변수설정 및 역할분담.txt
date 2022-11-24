@@ -1,0 +1,13 @@
+
+1. 변수 선정
+
+ProductDTO - String name, int price, int qty
+MoneyDTO - int money
+
+main -
+
+layout- btn_p1,2,3,4
+          btn_m1
+	
+업무 분담
+
