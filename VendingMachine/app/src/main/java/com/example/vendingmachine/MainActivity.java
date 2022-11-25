@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             tv_r_money.setText("잔액 : "+ m_dto.getMoney());
 
         }else if (v.getId() == R.id.btn_return){
-            Intent intent = new Intent(MainActivity.this, SubActivity.class);
+            Intent intent = new Intent(MainActivity.this, ResultActivity.class);
             intent.putExtra("m_dto", m_dto);
             intent.putExtra("r_dto", result);
             startActivity(intent);

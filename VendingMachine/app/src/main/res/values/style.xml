@@ -15,6 +15,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:textSize">20dp</item>
         <item name="android:padding">20dp</item>
+        <item name="android:textColor">#fff</item>
         <item name="android:background">#5B9279</item>
         <item name="android:textStyle">bold</item>
     </style>

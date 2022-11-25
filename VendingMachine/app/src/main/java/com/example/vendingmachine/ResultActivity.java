@@ -9,13 +9,13 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class SubActivity extends AppCompatActivity {
+public class ResultActivity extends AppCompatActivity {
 
     TextView tv_money,tv_sub_get1,tv_sub_get2,tv_sub_get3,tv_sub_get4,total;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sub);
+        setContentView(R.layout.activity_result);
 
         tv_money = findViewById(R.id.tv_money);
         tv_sub_get1=findViewById(R.id.tv_sub_get1);
