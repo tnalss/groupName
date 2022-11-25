@@ -47,10 +47,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tv_p4_qty = findViewById(R.id.tv_p4_qty);
         tv_r_money = findViewById(R.id.tv_r_money);
         et_insert = findViewById(R.id.et_insert);
-        btn_order_p1 = findViewById(R.id.btn_oder_p1);
-        btn_order_p2 = findViewById(R.id.btn_oder_p2);
-        btn_order_p3 = findViewById(R.id.btn_oder_p3);
-        btn_order_p4 = findViewById(R.id.btn_oder_p4);
+        btn_order_p1 = findViewById(R.id.btn_order_p1);
+        btn_order_p2 = findViewById(R.id.btn_order_p2);
+        btn_order_p3 = findViewById(R.id.btn_order_p3);
+        btn_order_p4 = findViewById(R.id.btn_order_p4);
         btn_insert = findViewById(R.id.btn_insert);
         btn_return = findViewById(R.id.btn_return);
         list.add(new ProductDTO(tv_p1_name.getText().toString(), Integer.parseInt(tv_p1_price.getText().toString()), Integer.parseInt(tv_p1_qty.getText().toString())));
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //    // ----------- 현우 -------------
     @Override
     public void onClick(View v) {
-        if(v.getId() == R.id.btn_oder_p1){
+        if(v.getId() == R.id.btn_order_p1){
             if(list.get(0).getQty()==0) {
                 Toast.makeText(MainActivity.this, "현재 품절 상품입니다.", Toast.LENGTH_SHORT).show();
             }else if(list.get(0).getPrice() > m_dto.getMoney()){
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 result.get(0).setQty(result.get(0).getQty()+1);
 
             }
-        }else if (v.getId() == R.id.btn_oder_p2) {
+        }else if (v.getId() == R.id.btn_order_p2) {
             if(list.get(1).getQty()==0) {
                 Toast.makeText(MainActivity.this, "현재 품절 상품입니다.", Toast.LENGTH_SHORT).show();
             }else if(list.get(1).getPrice() > m_dto.getMoney()){
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // 구매한 개수더해줌
                 result.get(1).setQty(result.get(1).getQty()+1);
             }
-        }else if (v.getId() == R.id.btn_oder_p3) {
+        }else if (v.getId() == R.id.btn_order_p3) {
             if(list.get(2).getQty()==0) {
                 Toast.makeText(MainActivity.this, "현재 품절 상품입니다.", Toast.LENGTH_SHORT).show();
             }else if(list.get(2).getPrice() > m_dto.getMoney()){
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // 구매한 개수더해줌
                 result.get(2).setQty(result.get(2).getQty()+1);
             }
-        }else if (v.getId() == R.id.btn_oder_p4){
+        }else if (v.getId() == R.id.btn_order_p4){
             if(list.get(3).getQty()==0) {
                 Toast.makeText(MainActivity.this, "현재 품절 상품입니다.", Toast.LENGTH_SHORT).show();
             }else if(list.get(3).getPrice() > m_dto.getMoney()){

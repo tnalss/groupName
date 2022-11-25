@@ -63,7 +63,7 @@
                  style="@style/manin_style"  />
             </LinearLayout>
             <Button
-                android:id="@+id/btn_oder_p1"
+                android:id="@+id/btn_order_p1"
                style="@style/btn_order"/>
         </LinearLayout>
         <!--  사이다 상품 레이아웃      -->
@@ -107,7 +107,7 @@
                     style="@style/manin_style"  />
             </LinearLayout>
             <Button
-                android:id="@+id/btn_oder_p2"
+                android:id="@+id/btn_order_p2"
                 style="@style/btn_order"/>
         </LinearLayout>
     </LinearLayout>
@@ -157,7 +157,7 @@
                     style="@style/manin_style"  />
             </LinearLayout>
             <Button
-                android:id="@+id/btn_oder_p3"
+                android:id="@+id/btn_order_p3"
                 style="@style/btn_order"/>
         </LinearLayout>
         <!--  비락식혜 상품 레이아웃      -->
@@ -201,7 +201,7 @@
                     style="@style/manin_style"  />
             </LinearLayout>
             <Button
-                android:id="@+id/btn_oder_p4"
+                android:id="@+id/btn_order_p4"
                 style="@style/btn_order"/>
         </LinearLayout>
     </LinearLayout>
