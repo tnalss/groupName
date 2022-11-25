@@ -33,26 +33,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         list = new ArrayList<>();
         result = new ArrayList<>();
         // 아이디 값 가져와서 초기화
-        tv_p1_name =findViewById(R.id.tv_p1_name);
-        tv_p2_name =findViewById(R.id.tv_p2_name);
-        tv_p3_name =findViewById(R.id.tv_p3_name);
-        tv_p4_name =findViewById(R.id.tv_p4_name);
-        tv_p1_price =findViewById(R.id.tv_p1_price);
-        tv_p2_price =findViewById(R.id.tv_p2_price);
-        tv_p3_price =findViewById(R.id.tv_p3_price);
-        tv_p4_price =findViewById(R.id.tv_p4_price);
-        tv_p1_qty = findViewById(R.id.tv_p1_qty);
-        tv_p2_qty = findViewById(R.id.tv_p2_qty);
-        tv_p3_qty = findViewById(R.id.tv_p3_qty);
-        tv_p4_qty = findViewById(R.id.tv_p4_qty);
-        tv_r_money = findViewById(R.id.tv_r_money);
-        et_insert = findViewById(R.id.et_insert);
-        btn_order_p1 = findViewById(R.id.btn_order_p1);
-        btn_order_p2 = findViewById(R.id.btn_order_p2);
-        btn_order_p3 = findViewById(R.id.btn_order_p3);
-        btn_order_p4 = findViewById(R.id.btn_order_p4);
-        btn_insert = findViewById(R.id.btn_insert);
-        btn_return = findViewById(R.id.btn_return);
+
+        start();
+
         list.add(new ProductDTO(tv_p1_name.getText().toString(), Integer.parseInt(tv_p1_price.getText().toString()), Integer.parseInt(tv_p1_qty.getText().toString())));
         list.add(new ProductDTO(tv_p2_name.getText().toString(), Integer.parseInt(tv_p2_price.getText().toString()), Integer.parseInt(tv_p2_qty.getText().toString())));
         list.add(new ProductDTO(tv_p3_name.getText().toString(), Integer.parseInt(tv_p3_price.getText().toString()), Integer.parseInt(tv_p3_qty.getText().toString())));
@@ -145,5 +128,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         }
     }
-
+    void start(){
+        tv_p1_name =findViewById(R.id.tv_p1_name);
+        tv_p2_name =findViewById(R.id.tv_p2_name);
+        tv_p3_name =findViewById(R.id.tv_p3_name);
+        tv_p4_name =findViewById(R.id.tv_p4_name);
+        tv_p1_price =findViewById(R.id.tv_p1_price);
+        tv_p2_price =findViewById(R.id.tv_p2_price);
+        tv_p3_price =findViewById(R.id.tv_p3_price);
+        tv_p4_price =findViewById(R.id.tv_p4_price);
+        tv_p1_qty = findViewById(R.id.tv_p1_qty);
+        tv_p2_qty = findViewById(R.id.tv_p2_qty);
+        tv_p3_qty = findViewById(R.id.tv_p3_qty);
+        tv_p4_qty = findViewById(R.id.tv_p4_qty);
+        tv_r_money = findViewById(R.id.tv_r_money);
+        et_insert = findViewById(R.id.et_insert);
+        btn_order_p1 = findViewById(R.id.btn_order_p1);
+        btn_order_p2 = findViewById(R.id.btn_order_p2);
+        btn_order_p3 = findViewById(R.id.btn_order_p3);
+        btn_order_p4 = findViewById(R.id.btn_order_p4);
+        btn_insert = findViewById(R.id.btn_insert);
+        btn_return = findViewById(R.id.btn_return);
+    }
 }
