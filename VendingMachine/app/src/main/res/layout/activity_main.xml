@@ -10,11 +10,7 @@
 
     <TextView
         android:text="자판기 프로그램"
-        android:textAlignment="center"
-        android:layout_margin="30dp"
-        android:textSize="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        style="@style/title"/>
     <Button
         android:backgroundTint="#989595"
         android:layout_marginBottom="20dp"
@@ -45,8 +41,7 @@
                     android:id="@+id/tv_p1_name"
                     android:text="콜라"
                     android:layout_marginRight="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    style="@style/manin_style"/>
                 <TextView
                     android:id="@+id/tv_p1_price"
                     android:text="800"
@@ -74,7 +69,7 @@
             </LinearLayout>
             <Button
                 android:id="@+id/btn_oder_p1"
-                android:text="주문하기"
+                 android:text="주문하기"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
