@@ -2,6 +2,7 @@ package com.example.vendingmachine;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ProductDTO p_dto;
     MoneyDTO m_dto;
     ArrayList<ProductDTO> list;
+    ArrayList<ResultDTO> result;
     EditText et_insert;
     Button btn_order_p1, btn_order_p2, btn_order_p3, btn_order_p4,
            btn_insert, btn_return;
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         m_dto = new MoneyDTO(0);
         list = new ArrayList<>();
+        result = new ArrayList<>();
         // 아이디 값 가져와서 초기화
         tv_p1_name =findViewById(R.id.tv_p1_name);
         tv_p2_name =findViewById(R.id.tv_p2_name);
@@ -54,6 +57,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         list.add(new ProductDTO(tv_p2_name.getText().toString(), Integer.parseInt(tv_p2_price.getText().toString()), Integer.parseInt(tv_p2_qty.getText().toString())));
         list.add(new ProductDTO(tv_p3_name.getText().toString(), Integer.parseInt(tv_p3_price.getText().toString()), Integer.parseInt(tv_p3_qty.getText().toString())));
         list.add(new ProductDTO(tv_p4_name.getText().toString(), Integer.parseInt(tv_p4_price.getText().toString()), Integer.parseInt(tv_p4_qty.getText().toString())));
+        result.add(new ResultDTO(0,Integer.parseInt(tv_p1_price.getText().toString()),tv_p1_name.getText().toString()));
+        result.add(new ResultDTO(0,Integer.parseInt(tv_p2_price.getText().toString()),tv_p2_name.getText().toString()));
+        result.add(new ResultDTO(0,Integer.parseInt(tv_p3_price.getText().toString()),tv_p3_name.getText().toString()));
+        result.add(new ResultDTO(0,Integer.parseInt(tv_p4_price.getText().toString()),tv_p4_name.getText().toString()));
+
+
         btn_order_p1.setOnClickListener(this);
         btn_order_p2.setOnClickListener(this);
         btn_order_p3.setOnClickListener(this);
@@ -64,6 +73,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+
+
+
+//    // ----------- 현우 -------------
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.btn_oder_p1){
@@ -76,6 +89,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 list.get(0).setQty(list.get(0).getQty()-1);
                 tv_p1_qty.setText(""+list.get(0).getQty());
                 tv_r_money.setText(""+m_dto.getMoney());
+                // 구매한 개수더해줌
+                result.get(0).setQty(result.get(0).getQty()+1);
+
             }
         }else if (v.getId() == R.id.btn_oder_p2) {
             if(list.get(1).getQty()==0) {
@@ -87,6 +103,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 list.get(1).setQty(list.get(1).getQty()-1);
                 tv_p2_qty.setText(""+list.get(1).getQty());
                 tv_r_money.setText(""+m_dto.getMoney());
+                // 구매한 개수더해줌
+                result.get(1).setQty(result.get(1).getQty()+1);
             }
         }else if (v.getId() == R.id.btn_oder_p3) {
             if(list.get(2).getQty()==0) {
@@ -98,6 +116,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 list.get(2).setQty(list.get(2).getQty()-1);
                 tv_p3_qty.setText(""+list.get(2).getQty());
                 tv_r_money.setText(""+m_dto.getMoney());
+                // 구매한 개수더해줌
+                result.get(2).setQty(result.get(2).getQty()+1);
             }
         }else if (v.getId() == R.id.btn_oder_p4){
             if(list.get(3).getQty()==0) {
@@ -109,6 +129,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 list.get(3).setQty(list.get(3).getQty()-1);
                 tv_p4_qty.setText(""+list.get(3).getQty());
                 tv_r_money.setText(""+m_dto.getMoney());
+                // 구매한 개수더해줌
+                result.get(3).setQty(result.get(3).getQty()+1);
             }
         }else if (v.getId() == R.id.btn_insert){
             int money = m_dto.getMoney();
@@ -117,7 +139,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             tv_r_money.setText("잔액 : "+ m_dto.getMoney());
 
         }else if (v.getId() == R.id.btn_return){
-
+            Intent intent = new Intent(MainActivity.this, SubActivity.class);
+            intent.putExtra("m_dto", m_dto);
+            intent.putExtra("r_dto", result);
+            startActivity(intent);
         }
     }
 
