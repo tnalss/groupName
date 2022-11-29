@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 CCCCCCCCCCCCCCCCCCCCCCCC
+=======
+CCCCCCCC
+>>>>>>> test
