@@ -6,5 +6,8 @@ public class MergeTest {
 			sum+=i;
 		}
 		System.out.println(sum);
+		for(int i = 0; i <= 10; i++) {
+			System.out.println(i);
+		}
 	}
 }
