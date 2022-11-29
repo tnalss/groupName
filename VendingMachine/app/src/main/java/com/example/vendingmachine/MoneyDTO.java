@@ -1,6 +1,8 @@
 package com.example.vendingmachine;
 
-public class MoneyDTO {
+import java.io.Serializable;
+
+public class MoneyDTO implements Serializable {
     private int money;
 
     public MoneyDTO(int money) {
