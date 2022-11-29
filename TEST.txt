@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-CCCCCCCCCCCCCCCCCCCCCCCC
-=======
-CCCCCCCC
->>>>>>> test
-=======
-AAAAAA
->>>>>>> TESTA
+AAAAAABBBB
