@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="countries">
+        <item>@drawable/img0</item>
+        <item>@drawable/img1</item>
+        <item>@drawable/img2</item>
+        <item>@drawable/img3</item>
+        <item>@drawable/img4</item>
+        <item>@drawable/img5</item>
+        <item>@drawable/img6</item>
+        <item>@drawable/img7</item>
+        <item>@drawable/img8</item>
+        <item>@drawable/img9</item>
+        <item>@drawable/img10</item>
+        <item>@drawable/img11</item>
+        <item>@drawable/img12</item>
+    </array>
+
+    <array name ="nara">
+        <item> 대한민국</item>
+        <item> 아르헨티나</item>
+        <item> 호주</item>
+        <item> 벨기에</item>
+        <item> 브라질</item>
+        <item> 카메룬</item>
+        <item> 캐나다</item>
+        <item> 코스타리카</item>
+        <item> 크로아티아</item>
+        <item> 덴마크</item>
+        <item> 에콰도르</item>
+        <item> 잉글랜드</item>
+        <item> 프랑스</item>
+
+    </array>
+    <array name ="englishname">
+        <item>Korea Republic</item>
+        <item> Argentina</item>
+        <item> Australia</item>
+        <item> Belgium</item>
+        <item> Brazil</item>
+        <item> Cameroon</item>
+        <item> Canada</item>
+        <item> Costa Rica</item>
+        <item> Croatia</item>
+        <item> Denmark</item>
+        <item> Ecuador</item>
+        <item> England</item>
+        <item> France</item>
+
+    </array>
+</resources>
